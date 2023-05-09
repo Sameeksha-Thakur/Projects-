@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .login {
+            width: 400px;
+            margin: 16px auto;
+            font-size: 16px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    <div class='login'>
+        <h1>Heart disease prediction</h1>
+        <form action="{{ url_for('predict')}}"method="post">
+            
+            Age:<input type="text" name="Age" placeholder="Age" required="required" id="age" />
+            <br>
+            RestingBP:<input type="text" name="RestingBP" placeholder="RestingBP" required="required" id="bp"/>
+            <br>
+            
+            Cholesterol:<input type="text" name="Cholesterol" placeholder="Cholesterol" required="required" id="chol"/>
+            <br>
+            
+            FastingBS:<input type="text" name="FastingBS" placeholder="FastingBS" required="required" id="bs"/>
+            <br>
+            
+            MaxHR:<input type="text" name="MaxHR" placeholder="MaxHR" required="required" id="hr"/>
+
+            <br>
+            Oldpeak:<input type="text" name="Oldpeak" placeholder="Oldpeak" required="required" id="peak"/>
+            <br>
+            
+            Sex_M:<input type="text" name="Sex_M" placeholder="Sex_M" required="required" id="peak"/>
+            <br>
+
+            ChestPainType_ATA:<input type="text" name="ChestPainType_ATA" placeholder="ChestPainType_ATA" required="required" id="peak"/>
+            ChestPainType_NAP:<input type="text" name="ChestPainType_NAP" placeholder="ChestPainType_NAP" required="required" id="peak"/>
+            ChestPainType_TA:<input type="text" name="ChestPainType_TA" placeholder="ChestPainType_TA" required="required" id="peak"/>
+            <br>
+
+            RestingECG_Normal:<input type="text" name="RestingECG_Normal" placeholder="RestingECG_Normal" required="required" id="peak"/>
+            RestingECG_ST:<input type="text" name="RestingECG_ST" placeholder="RestingECG_ST" required="required" id="peak"/>
+            <br>
+
+            ExerciseAngina_Y:<input type="text" name="ExerciseAngina_Y" placeholder="ExerciseAngina_Y" required="required" id="peak"/>
+            <br>
+
+            ST_Slope_Flat:<input type="text" name="ST_Slope_Flat" placeholder="ST_Slope_Flat" required="required" id="peak"/>
+            ST_Slope_Up:<input type="text" name="ST_Slope_Up" placeholder="ST_Slope_Up" required="required" id="peak"/>
+            <br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+    <br>
+    </div>
+    <script>
+        let a = document.getElementById("age").value;
+        console.log(a);
+    </script>
+</body>
+</html>
